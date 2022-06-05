@@ -5,7 +5,7 @@ import torchaudio
 class MFCCModel(nn.Module):
     def __init__(self, sample_rate=22050, embedding_size=64):
         super(MFCCModel, self).__init__()
-        # Simply model that provides MFCC features, no learnable parameters
+        # Simple model that provides MFCC features, no learnable parameters
         self.mfcc = torchaudio.transforms.MFCC(
             sample_rate=sample_rate, n_mfcc=embedding_size)
 
