@@ -7,7 +7,6 @@ class EmbeddingAPI:
     def load_model(self, model_path):
         return torch.load(model_path)
 
-    # Also need to return timestamps
     def get_timestamp_embeddings(self, audio, model):
         # Calculating timestamps separately by sliding window over the audio signal
         timestamps = []
